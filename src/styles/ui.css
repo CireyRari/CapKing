@@ -1,0 +1,76 @@
+/* UI utilities and base components */
+:root {
+  --gap: 14px;
+  --radius: 10px;
+}
+
+/* Buttons */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:8px 12px; border-radius:var(--radius); cursor:pointer; text-decoration:none }
+.btn-primary { background:var(--accent); color:#000; border:0; font-weight:700; padding:10px 14px; border-radius:8px; cursor:pointer; transition:transform .12s ease, box-shadow .12s ease }
+.btn-block { display:block; width:100% }
+.btn-ghost { background:transparent; color:var(--text); border:1px solid var(--border) }
+.btn-danger { background:#b71c1c; color:#fff; border:0 }
+
+.btn-primary:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.35) }
+.btn-ghost:hover{ background:rgba(255,255,255,0.02) }
+
+/* Forms */
+input, select, textarea { font:inherit; padding:10px 12px; border-radius:8px; background:#111; border:1px solid var(--border); color:var(--text); outline:none }
+textarea { min-height:120px; resize:vertical }
+label { color:var(--text); font-weight:600 }
+
+/* Form focus state */
+input:focus, select:focus, textarea:focus{ box-shadow:0 6px 18px rgba(0,0,0,.25); border-color:rgba(255,255,255,0.06) }
+
+/* Layout utilities */
+.container { max-width:1100px; margin:0 auto }
+.wrap { max-width:1080px; margin:40px auto 70px; padding:0 6% }
+.center { text-align:center }
+
+/* spacing utilities */
+.mt-1{ margin-top:8px }
+.mt-2{ margin-top:14px }
+.mt-3{ margin-top:28px }
+.mb-1{ margin-bottom:8px }
+.mb-2{ margin-bottom:14px }
+.mb-3{ margin-bottom:28px }
+.ml-1{ margin-left:8px }
+.mr-1{ margin-right:8px }
+
+/* layout helpers */
+.grid{ display:grid; gap:var(--gap) }
+.grid-2{ grid-template-columns:repeat(2,1fr) }
+.grid-3{ grid-template-columns:repeat(3,1fr) }
+.gap-grid{ gap:18px }
+.stack{ display:flex; flex-direction:column; gap:12px }
+
+
+/* Cards */
+.card { background:#111; border:1px solid var(--border); border-radius:12px; padding:12px }
+/* slightly elevated card */
+.card-elevated{ box-shadow:0 6px 18px rgba(0,0,0,.28); border-color:rgba(255,255,255,0.02) }
+
+/* Thumbnails / small media utility (used by product detail and others) */
+.thumbnails{ display:flex; gap:8px; padding-top:6px; overflow-x:auto; -webkit-overflow-scrolling:touch }
+.thumbnails::-webkit-scrollbar{ height:8px }
+.thumbnails::-webkit-scrollbar-thumb{ background:rgba(255,255,255,0.03); border-radius:8px }
+.thumb{ flex:0 0 auto; width:64px; height:64px; border-radius:8px; overflow:hidden; display:flex; align-items:center; justify-content:center; border:1px solid var(--border); cursor:pointer }
+.thumb img{ max-width:100%; max-height:100%; object-fit:contain; transition:transform .12s ease, opacity .12s }
+.thumb:hover{ transform:translateY(-4px) }
+
+/* Headings scale */
+h1 { font-size:2.4rem; margin:0 0 8px }
+h2 { font-size:1.6rem; margin:0 0 8px }
+h3 { font-size:1.1rem; margin:0 0 8px }
+
+/* Responsive helpers */
+@media (max-width:720px){
+  h1{ font-size:1.8rem }
+  .wrap{ padding:20px }
+}
+
+@media (max-width:420px){
+  .grid-2{ grid-template-columns:1fr }
+  .grid-3{ grid-template-columns:1fr }
+  .wrap{ margin:24px auto 40px }
+}

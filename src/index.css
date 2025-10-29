@@ -1,0 +1,27 @@
+/* Minimal base styles — you can import your existing css files where needed */
+:root{
+	--bg:#0f0f0f;
+	--text:#eaeaea;
+	--muted:#bfbfbf;
+	--accent:#ffd54a;
+	--card:#0f0f0f;
+	--border:#222;
+	--font: 'Boxed', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+@font-face {
+  font-family: Boxed;
+  src: url('/assets/fonts/BoxedRoundBook.ttf');
+  font-display: swap;
+}
+html,body,#root{height:100%;margin:0}
+body{font-family: var(--font); background:var(--bg); color:var(--text)}
+main{padding:20px}
+a{color:inherit}
+
+/* small utilities */
+.container{max-width:1100px;margin:0 auto}
+
+/* import ui utilities (headings, buttons, forms) */
+@import './styles/ui.css';
+

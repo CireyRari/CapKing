@@ -1,0 +1,18 @@
+.site-header{ background:#000; padding:18px 6%; position:relative; border-bottom:1px solid var(--border) }
+.site-header .wrap{ max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px }
+.site-brand{ margin:0; font-size:18px; position:absolute; left:50%; transform:translateX(-50%); top:8px }
+.site-brand img{ height:64px }
+.site-nav{ display:flex; gap:18px; align-items:center }
+.site-nav a{ text-decoration:none; color:var(--text); font-weight:500; font-size:1rem }
+.site-nav a:hover, .site-nav a:focus-visible, .site-nav a.active{ color:var(--accent); outline:none }
+.cart-badge{ background:var(--accent); color:#000; border-radius:999px; padding:2px 8px; margin-left:8px; font-weight:700 }
+.auth-actions{ display:inline-flex; gap:8px; align-items:center }
+.btn-ghost{ background:transparent; border:1px solid #333; color:var(--text); padding:6px 8px; border-radius:6px; cursor:pointer }
+.mini-btn{ display:inline-flex; align-items:center; gap:6px; background:#1b1b1b; color:var(--accent); padding:8px 14px; border-radius:6px; border:1px solid #353535 }
+.mini-btn:hover{ background:#262626 }
+
+@media (max-width:720px){
+  .site-header{ padding:12px 4% }
+  .site-brand img{ height:56px }
+  .site-nav{ gap:12px }
+}

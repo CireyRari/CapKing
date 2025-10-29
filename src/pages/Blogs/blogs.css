@@ -1,0 +1,10 @@
+.hero{ min-height:42vh; display:flex; align-items:center; justify-content:center; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.7)), url('/assets/images/bg-home.webp') center/cover no-repeat; padding:40px 6%; color:var(--text); text-align:center }
+.hero-content h1{ margin:0 0 10px; font-size:2.5rem }
+.blog-grid{ max-width:1220px; margin:40px auto 70px; padding:0 6%; display:grid; gap:30px; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)) }
+.card{ background:#111; border:1px solid #222; border-radius:16px; overflow:hidden }
+.card__img{ aspect-ratio:16/10; background:#1e1e1e }
+.card__body{ padding:16px }
+.card__title{ font-weight:700 }
+.card__desc{ color:#bdbdbd }
+
+.footer{ text-align:center; padding:30px 0 50px; color:#7d7d7d }

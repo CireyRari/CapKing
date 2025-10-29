@@ -1,0 +1,5 @@
+/* Productos list styles */
+.productos-page{ max-width:1100px; margin:28px auto; padding:0 12px }
+.productos-page h2{ margin:0 0 6px }
+.productos-page .muted{ color:#bbb }
+.productos-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:18px; margin-top:18px }

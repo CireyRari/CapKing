@@ -1,0 +1,15 @@
+.pc-card{background:#111;border:1px solid var(--border);border-radius:12px;padding:14px;display:flex;flex-direction:column;transition:transform .14s ease, box-shadow .14s ease}
+.pc-link{flex:1;text-decoration:none;color:inherit}
+.pc-figure{height:180px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pc-figure img{max-height:100%;object-fit:contain}
+.pc-title{margin:10px 0 6px;font-size:16px}
+.pc-attrs{color:var(--muted);font-size:13px}
+.pc-price{margin-top:8px;font-weight:700}
+.pc-actions{margin-top:12px;display:flex;gap:8px}
+.pc-btn{flex:1;padding:10px;border-radius:8px;background:var(--accent);border:none;cursor:pointer}
+.pc-link-ghost{padding:8px 12px;border-radius:8px;background:transparent;border:1px solid #333;color:var(--text);display:inline-flex;align-items:center;text-decoration:none}
+.pc-card:hover{ transform:translateY(-6px); box-shadow:0 10px 30px rgba(0,0,0,.32) }
+
+@media (max-width:540px){
+  .pc-figure{height:140px}
+}

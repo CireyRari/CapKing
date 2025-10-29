@@ -1,0 +1,11 @@
+.hero{ min-height:76vh; display:flex; align-items:center; justify-content:center; background-image: url('/assets/images/bg-home.webp'); background-size:cover; background-position:center; color:var(--text); padding:28px 6% }
+.hero-content{ max-width:800px; text-align:center }
+.hero-content h1{ font-size:2.4rem; margin-bottom:8px }
+.hero-content p{ font-size:1.05rem; color:var(--muted) }
+.hero-button{ font-size:1rem; padding:10px 14px; color:#fff; background:#0008; border:1px solid #ffd900; border-radius:6px; text-decoration:none }
+
+#productos{ padding:25px 5% }
+.productos-title{ font-size:2rem; color:var(--text) }
+.grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap:20px; max-width:1200px; margin:0 auto; margin-top:18px }
+
+.card__btn.added{ background:#1f3d16 !important; color:#9dff7a !important }

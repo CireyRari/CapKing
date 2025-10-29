@@ -1,0 +1,35 @@
+/* Checkout styles (trimmed from original) */
+.wrap{ max-width:1080px; margin:40px auto 70px; padding:0 6% }
+.resume-grid{ display:grid; gap:40px; grid-template-columns: 1fr 340px }
+.box{ background:#111;border:1px solid #1f1f1f;border-radius:18px;padding:26px }
+.r-item{ display:grid; grid-template-columns:72px 1fr auto; gap:18px }
+.r-item img{ width:72px; height:72px; object-fit:contain }
+.summary-row{ display:flex; justify-content:space-between }
+.r-item-title{ font-weight:700 }
+.r-item-attrs{ color:#bbb; font-size:13px }
+.r-item-price{ font-weight:700 }
+
+/* Form grid used in Checkout */
+.form-grid{ display:grid; gap:10px }
+
+/* Summary list wrapper for right column */
+.summary-list{ margin-top:8px; display:grid; gap:8px }
+
+@media (max-width:980px){
+	.resume-grid{ grid-template-columns: 1fr }
+}
+
+/* Form controls in checkout */
+.wrap form input,
+.wrap form select,
+.wrap form textarea {
+	width:100%;
+	padding:10px 12px;
+	border-radius:8px;
+	background:#111;
+	border:1px solid #222;
+	color:var(--text);
+	outline:none;
+}
+
+.wrap h2{ margin-top:0 }

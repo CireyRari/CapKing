@@ -1,0 +1,7 @@
+/* Login page styles (simple form) */
+.login-page{ max-width:540px; margin:40px auto }
+.login-form{ display:grid; gap:8px; margin-top:12px }
+.login-form .input{ padding:10px; border-radius:6px; background:#111; border:1px solid #222; color:var(--text) }
+.login-actions{ display:flex; gap:8px }
+.btn-link{ padding:10px; background:transparent; border:1px solid #333; border-radius:6px; color:var(--text); text-decoration:none }
+.error{ color:#f88 }

@@ -1,0 +1,16 @@
+/* Orden / thank-you page styles */
+.orden-page{ max-width:1100px; margin:24px auto; padding:0 12px }
+.orden-note{ color:#bbb }
+.orden-box{ margin-top:18px; background:#0f0f0f; padding:12px; border-radius:8px }
+.orden-items{ display:grid; gap:8px }
+.orden-row{ display:flex; justify-content:space-between; align-items:center }
+.orden-item-left{ display:flex; gap:8px; align-items:center }
+.orden-item-title{ font-weight:700 }
+.orden-item-qty{ color:#bbb; font-size:13px }
+.orden-total-row{ display:flex; justify-content:space-between; margin-top:12px; font-weight:800 }
+.orden-customer{ margin-top:12px }
+.btn-primary-link{ padding:10px; background:var(--accent); border-radius:8px; color:#000; text-decoration:none }
+
+.orden-item-img{ width:48px; height:48px; object-fit:contain }
+.orden-footer{ margin-top:16px }
+
