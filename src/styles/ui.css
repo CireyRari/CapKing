@@ -5,14 +5,15 @@
 }
 
 /* Buttons */
-.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:8px 12px; border-radius:var(--radius); cursor:pointer; text-decoration:none }
-.btn-primary { background:var(--accent); color:#000; border:0; font-weight:700; padding:10px 14px; border-radius:8px; cursor:pointer; transition:transform .12s ease, box-shadow .12s ease }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:8px 12px; border-radius:var(--radius); cursor:pointer; text-decoration:none; transition:transform .12s ease, box-shadow .12s ease }
+.btn-primary { background:var(--accent); color:#000; border:0; font-weight:700; padding:10px 14px; border-radius:var(--radius); cursor:pointer; box-shadow: none }
 .btn-block { display:block; width:100% }
 .btn-ghost { background:transparent; color:var(--text); border:1px solid var(--border) }
 .btn-danger { background:#b71c1c; color:#fff; border:0 }
 
-.btn-primary:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.35) }
+.btn-primary:hover{ transform:translateY(-2px); box-shadow:var(--shadow) }
 .btn-ghost:hover{ background:rgba(255,255,255,0.02) }
+.btn:focus{ outline:2px solid rgba(255,213,74,0.18); outline-offset:2px }
 
 /* Forms */
 input, select, textarea { font:inherit; padding:10px 12px; border-radius:8px; background:#111; border:1px solid var(--border); color:var(--text); outline:none }
@@ -46,9 +47,11 @@ input:focus, select:focus, textarea:focus{ box-shadow:0 6px 18px rgba(0,0,0,.25)
 
 
 /* Cards */
-.card { background:#111; border:1px solid var(--border); border-radius:12px; padding:12px }
+.card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:14px; transition:transform .14s ease, box-shadow .14s ease }
 /* slightly elevated card */
-.card-elevated{ box-shadow:0 6px 18px rgba(0,0,0,.28); border-color:rgba(255,255,255,0.02) }
+.card-elevated{ box-shadow:var(--shadow); border-color:rgba(255,255,255,0.02); transform:translateY(-4px) }
+
+.callout{ background:linear-gradient(90deg, rgba(255,213,74,0.08), rgba(255,213,74,0.02)); padding:10px 12px; border-radius:8px; color:var(--text); border:1px solid rgba(255,213,74,0.04) }
 
 /* Thumbnails / small media utility (used by product detail and others) */
 .thumbnails{ display:flex; gap:8px; padding-top:6px; overflow-x:auto; -webkit-overflow-scrolling:touch }

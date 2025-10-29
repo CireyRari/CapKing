@@ -11,6 +11,7 @@ export default function Producto(){
   const [qty, setQty] = useState(1)
   const [activeImg, setActiveImg] = useState(product ? product.img : '')
   const [zoomOpen, setZoomOpen] = useState(false)
+  const [isClosing, setIsClosing] = useState(false)
   const [toastVisible, setToastVisible] = useState(false)
   const { addItem, items } = useCart()
 
@@ -31,6 +32,15 @@ export default function Producto(){
   }
 
   const thumbnails = product.images || [product.img]
+
+  function handleClose(){
+    // play closing animation, then unmount
+    setIsClosing(true)
+    setTimeout(() => {
+      setIsClosing(false)
+      setZoomOpen(false)
+    }, 220)
+  }
 
   return (
     <div className="producto-wrap">
@@ -74,9 +84,14 @@ export default function Producto(){
         </div>
       </div>
 
-      {zoomOpen && (
-        <div className="zoom-overlay" onClick={() => setZoomOpen(false)}>
-          <img src={activeImg} alt={product.titulo} />
+      {(zoomOpen || isClosing) && (
+        <div className={`zoom-overlay ${isClosing ? 'closing' : 'open'}`} role="dialog" aria-modal="true" onClick={() => handleClose()}>
+          <div className="zoom-inner" onClick={(e) => e.stopPropagation()}>
+            <button className="zoom-close" onClick={() => handleClose()} aria-label="Cerrar imagen">
+              ×
+            </button>
+            <img src={activeImg} alt={product.titulo} />
+          </div>
         </div>
       )}
 
